@@ -42,9 +42,34 @@ qa-portfolio-makeupstore/
 
 ---
 
-## ⚙️ Setup
+
+---
+
+## ⚙️ Setup (how to run locally)
 ```bash
+# 1. Clone repo
+git clone https://github.com/karpenkoalla1504-blip/qa-portfolio-makeupstore.git
+cd qa-portfolio-makeupstore
+
+# 2. Create venv
 python -m venv .venv
 source .venv/bin/activate   # Windows: .venv\Scripts\activate
+
+# 3. Install dependencies
 pip install -r requirements.txt
+
+## ▶️ Run tests
+pytest -q
+
+## 🔧 Config
+Base URL (default: https://makeupstore.com)
+Set via env var:
+
+export BASE_URL="https://makeupstore.com"
+
+
+Credentials (for positive login test)
+
+export TEST_LOGIN_EMAIL="karpenkoalla15.04+test@gmail.com"
+export TEST_LOGIN_PASSWORD="TestTest123"
 
